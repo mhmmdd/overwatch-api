@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS hero;
+DROP TABLE IF EXISTS ability;
+
+CREATE TABLE hero (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  health INT DEFAULT 0,
+  armour INT DEFAULT 0,
+  shield INT DEFAULT 0,
+  real_name VARCHAR(250) NOT NULL,
+);
+
+CREATE TABLE ability (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  description VARCHAR(4000) NULL,
+  is_ultimate BOOLEAN,
+  hero_id INT NOT NULL
+);
